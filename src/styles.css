@@ -1,0 +1,73 @@
+body {
+  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
+    radial-gradient(
+      91% 146%,
+      rgba(255, 255, 255, 0.5) 47%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  background-blend-mode: screen;
+}
+
+.container {
+  text-align: center;
+  font-family: "Emilys Candy", cursive;
+}
+
+.today {
+  color: #138496;
+  font-size: 2.5rem;
+}
+h1 {
+  padding-top: 30px;
+
+  font-weight: bolder;
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3em;
+
+  max-width: 150px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.metric {
+  font-size: 1.5rem;
+  position: relative;
+  top: -20px;
+}
+
+p {
+  padding: 20px;
+  padding-top: 0;
+  font-size: 1.5rem;
+  color: #138496;
+  margin: 0;
+}
+.col-2 {
+  font-size: 1.5rem;
+}
+
+input {
+  font-size: 2rem;
+}
+
+a {
+  color: black;
+  opacity: 70%;
+}
+.btn {
+  font-size: 20px;
+}
+
+.fas {
+  opacity: 40%;
+}
+button {
+  border: 1px solid gray;
+  font-size: 33px;
+  padding: 1px 6px;
+
+  border-radius: 4px;
+}
