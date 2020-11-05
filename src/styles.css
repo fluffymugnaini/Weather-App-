@@ -73,3 +73,10 @@ button {
 
   border-radius: 4px;
 }
+
+h4 {
+  font-size: smaller;
+  position: relative;
+  left: 75px;
+  top: 10px;
+}
