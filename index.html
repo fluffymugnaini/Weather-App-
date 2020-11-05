@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StellasWeatherApp</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <script src="https://kit.fontawesome.com/3c64964295.js" crossorigin="anonymous"></script>
-    <link <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Syncopate&display=swap"
-        rel="stylesheet" />
+    <link 
+    rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+    crossorigin="anonymous" />
+    <script 
+    src="https://kit.fontawesome.com/3c64964295.js" 
+    crossorigin="anonymous"></script>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Syncopate&display=swap"
+        
+    rel="stylesheet" />
     />
 
     <link rel="stylesheet" href="src/styles.css" />
@@ -20,7 +27,7 @@
 <body>
     <div class="container">
         <h1>
-            <span id="city">city...</span>
+            <span id="city">🧡</span>
             <span class="today" id="today-date">Today is...</span>
         </h1>
 
@@ -66,10 +73,17 @@
         </div>
         <br />
         <form id="search-form">
-            <input type="text" placeholder="Change City" autocomplete="off" autofocus="on" id="city-input"
-                style="text-transform: uppercase;" <input oninput="this.value = this.value.toUpperCase()" />
-            /> <input type="submit" value="Search" </form>
-            <button>Current</button>
+            <input 
+            type="text" 
+            placeholder="Change City" 
+            autocomplete="off" 
+            autofocus="on" 
+            id="city-input"
+            style="text-transform: uppercase;"
+            oninput="this.value = this.value.toUpperCase()" />
+            /> 
+            <input type="submit" value="Search" />
+            <button id="current-location">Current</button>
             <br />
             <br />
             <p>

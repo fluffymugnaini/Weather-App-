@@ -54,18 +54,19 @@ function showRain(response) {
   rainElement.innerHTML = `${rain}`;
 }
 
-let button = document.querySelector("button");
+let button = document.querySelector("#current-location");
 button.addEventListener("click", getCurrentPosition);
 
-function getCurrentPosition() {
+function getCurrentPosition(event) {
+  event.preventDefault();
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
 function showPosition(position) {
-  let currentCity = document.querySelector("#city");
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiKey = "6587439784dfce495ce2e9a920c7a656";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
+  axios.get(apiUrl).then(showRain);
 }
