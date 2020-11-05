@@ -11,6 +11,8 @@ body {
 .container {
   text-align: center;
   font-family: "Emilys Candy", cursive;
+  border: 2px solid grey;
+  border-radius: 10px;
 }
 
 .today {
