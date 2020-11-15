@@ -1,7 +1,13 @@
 let now = new Date();
 let today = document.querySelector("#today-date");
 let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
 let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 let date = now.getDate();
 let months = [
   "January",
@@ -39,19 +45,21 @@ function searchCity(city) {
 &appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showTemp);
-  axios.get(apiUrl).then(showRain);
+  axios.get(apiUrl).then(showCloud);
+  
 }
 
 function showTemp(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = `${temperature}`;
+  
 }
 
-function showRain(response) {
-  let rain = response.data.weather[0].main;
-  let rainElement = document.querySelector("#precipitation");
-  rainElement.innerHTML = `${rain}`;
+function showCloud(response) {
+  let cloud = response.data.weather[0].description;
+  let cloudElement = document.querySelector("#precipitation");
+  cloudElement.innerHTML = `${cloud}`;
 }
 
 let button = document.querySelector("#current-location");
@@ -70,3 +78,5 @@ function showPosition(position) {
   axios.get(apiUrl).then(showTemp);
   axios.get(apiUrl).then(showRain);
 }
+
+
