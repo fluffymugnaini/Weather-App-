@@ -68,16 +68,16 @@ input {
 }
 
 a {
-  color: black;
-  opacity: 70%;
+  color: #ff6584;
 }
 .btn {
   font-size: 20px;
 }
 
 .fas {
-  opacity: 40%;
+  color: #e6e6e6;
 }
+
 button {
   border: 1px solid gray;
   font-size: 33px;

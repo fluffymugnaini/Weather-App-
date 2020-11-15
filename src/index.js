@@ -28,7 +28,7 @@ let year = now.getFullYear();
 today.innerHTML = `${hours}:${minutes}, ${date} ${month}, ${year}`;
 
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", changeCity);
+form.addEventListener("click", changeCity);
 
 function changeCity(event) {
   event.preventDefault();
@@ -45,7 +45,7 @@ function searchCity(city) {
 &appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showTemp);
-  axios.get(apiUrl).then(showCloud);
+  
   
 }
 
@@ -53,14 +53,14 @@ function showTemp(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = `${temperature}`;
-  
-}
 
-function showCloud(response) {
   let cloud = response.data.weather[0].description;
   let cloudElement = document.querySelector("#precipitation");
   cloudElement.innerHTML = `${cloud}`;
+  
 }
+
+
 
 let button = document.querySelector("#current-location");
 button.addEventListener("click", getCurrentPosition);
@@ -76,7 +76,7 @@ function showPosition(position) {
   let apiKey = "6587439784dfce495ce2e9a920c7a656";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
-  axios.get(apiUrl).then(showRain);
+  
 }
 
 
