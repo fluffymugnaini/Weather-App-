@@ -12,7 +12,7 @@ body {
   text-align: center;
   font-family: "Emilys Candy", cursive;
   max-width: 800px;
-  border: 2px solid #138496;
+  border: 2px solid #6f83d2;
   margin: 0 auto;
   border-radius: 10px;
 }
@@ -27,7 +27,7 @@ h4 {
 }
 
 .today {
-  color: #138496;
+  color: #6f83d2;
   font-size: 2rem;
 }
 h1 {
@@ -38,7 +38,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 2.5em;
 
   max-width: 200px;
   text-align: center;
@@ -55,8 +55,9 @@ p {
   padding: 20px;
   padding-top: 0;
   font-size: 1.5rem;
-  color: #138496;
+  color: #5969a8;
   margin: 0;
+  text-transform: capitalize;
 }
 .col-2 {
   font-size: 1.5rem;
@@ -83,4 +84,8 @@ button {
   padding: 1px 6px;
 
   border-radius: 4px;
+}
+
+.btn-info {
+  background-color: #6f83d2;
 }
