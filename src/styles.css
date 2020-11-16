@@ -68,6 +68,10 @@ input {
 }
 
 a {
+  color: black;
+}
+
+.farenheit {
   color: #ff6584;
 }
 .btn {

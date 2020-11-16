@@ -57,6 +57,12 @@ function showTemp(response) {
   let cloud = response.data.weather[0].description;
   let cloudElement = document.querySelector("#precipitation");
   cloudElement.innerHTML = `${cloud}`;
+
+  let city = response.data.name;
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = `${city}`;
+
+  celsiusTemp = response.data.main.temp;
   
 }
 
@@ -79,4 +85,29 @@ function showPosition(position) {
   
 }
 
+let celsiusTemp = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+function showFahrenheitTemp(event) {
+event.preventDefault();
+let tempElement = document.querySelector("#temperature");
+let fahrenheitTemp = (celsiusTemp * 9/5) + 32;
+tempElement.innerHTML = Math.round(fahrenheitTemp);
+
+}
+
+
+
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemp);
+
+function showCelsiusTemp(event) {
+event.preventDefault();
+let tempElement = document.querySelector("#temperature");
+tempElement.innerHTML = Math.round(celsiusTemp);
+
+}
 

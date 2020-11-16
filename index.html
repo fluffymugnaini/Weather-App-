@@ -35,7 +35,7 @@
         </h1>
 
         <h2>
-            <span id="temperature">Temp</span><span class="metric" id="celcius">°C | <a href="#">°F</a></span>
+            <span id="temperature">Temp</span><span class="metric"><a href="#" id="celcius-link">°C </a>| <a href="#" class="farenheit" id="fahrenheit-link">°F</a></span>
         </h2>
         <p><span id="precipitation">Weather Description</span></p>
         <div class="row">
@@ -82,8 +82,7 @@
             autocomplete="off" 
             autofocus="on" 
             id="city-input"
-            style="text-transform: uppercase;"
-            oninput="this.value = this.value.toUpperCase()" />
+             />
             /> 
             <input type="submit" value="Search" />
             <button id="current-location">Current</button>
